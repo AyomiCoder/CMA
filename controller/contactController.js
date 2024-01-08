@@ -2,8 +2,8 @@
 // @route get api/contact
 // @access public
 
-const getContact = (req, res)=>{
+const getContacts = (req, res)=>{
     res.json({message: "Get all contacts"})
 }
 
-module.exports = { getContact };
+module.exports = { getContacts };
