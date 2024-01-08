@@ -1,3 +1,2 @@
 //mongo db config
-
-....
+// moongoose
