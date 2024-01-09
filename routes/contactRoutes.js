@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router
 const { getContact, createContact, updateContact, deleteContact } = require('../controller/contactController')
 
-// to get all contact
-router.route('/').get(getContact)
+
+// to get all contacts
+router.route('/').get(getContacts)
 
 //to create a contact
 router.route('/').post(createContact)
