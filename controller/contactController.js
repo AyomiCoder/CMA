@@ -15,15 +15,16 @@ const getContact = (req, res)=>{
 }
 
 // @desc Create contact
-// @route POST api/contact
+// @route CR api/contact
 // @access public
 
 const createContact = (req, res)=>{
+    console.log(req.body)
     res.json({message: "Create contact"})
 }
 
 // @desc Update contact
-// @route POST api/contact/:id
+// @route PUT api/contact/:id
 // @access public
 
 const updateContact = (req, res)=>{
@@ -31,7 +32,7 @@ const updateContact = (req, res)=>{
 }
 
 // @desc Delete contact
-// @route POST api/contact/:id
+// @route DELETE api/contact/:id
 // @access public
 
 const deleteContact = (req, res)=>{
