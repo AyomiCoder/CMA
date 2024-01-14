@@ -14,11 +14,4 @@ router.route('/:id').put(updateContact)
 router.route('/:id').delete(deleteContact)
 
 
-
-
-
-
-
-
-
 module.exports = router
