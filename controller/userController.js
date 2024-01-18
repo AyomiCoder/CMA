@@ -1,10 +1,24 @@
 const asyncHandler = require('express-async-handler');
+const User = require('../model/userModel')
+
 
 // @desc Register a user
 // @route POST api/users/register
 // @access public
 const registerUser = asyncHandler( async (req, res) =>{
-    res.json({message: "Register user"})
+const (username, email, password) = req.body
+if (!username || !email || !password){
+res.status(400);
+throw New Error("All fields are mandatory")
+}
+
+const userAvailable = await User.finOne({email});
+if (userAvailable) {
+res.status(400);
+throw New Error("User already registered")
+}
+
+ res.json({message: "Register user"})
 });
 
 // @desc Login a user
